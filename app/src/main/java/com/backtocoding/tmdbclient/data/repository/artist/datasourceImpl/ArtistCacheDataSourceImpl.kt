@@ -5,7 +5,7 @@ import com.backtocoding.tmdbclient.data.repository.artist.datasource.ArtistCache
 
 class ArtistCacheDataSourceImpl : ArtistCacheDataSource {
     private var artistList = ArrayList<Artist>()
-    override suspend fun getArtistFromCache(): List<Artist> {
+    override suspend fun getArtistsFromCache(): List<Artist> {
         return artistList
     }
 

@@ -57,7 +57,7 @@ class ArtistRepositoryImpl(
     suspend fun getArtistsFromCache(): List<Artist> {
         lateinit var artistList: List<Artist>
         try {
-            artistList = artistCacheDataSource.getArtistFromCache()
+            artistList = artistCacheDataSource.getArtistsFromCache()
         } catch (exception: Exception) {
             Log.i("MyTag", exception.message.toString())
         }
