@@ -1,4 +1,4 @@
-package com.backtocoding.tmdbclient.data
+package com.backtocoding.tmdbclient.data.model.movie
 
 
 import com.google.gson.annotations.SerializedName
