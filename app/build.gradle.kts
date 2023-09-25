@@ -97,6 +97,13 @@ dependencies {
 
     testImplementation("junit:junit:4.13.2")
 
+    testImplementation("androidx.arch.core:core-testing:$arch_version")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version")
+    testImplementation("com.google.truth:truth:$truth_version")
+    testImplementation("androidx.test.ext:junit:1.1.5")
+    testImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation("org.robolectric:robolectric:4.9")
+
     androidTestImplementation("androidx.arch.core:core-testing:$arch_version")
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version")
     androidTestImplementation("com.google.truth:truth:$truth_version")
