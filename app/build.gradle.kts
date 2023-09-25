@@ -55,6 +55,7 @@ dependencies {
     val retrofit_version = "2.9.0"
     val interceptor_version = "4.11.0"
     val glide_version = "4.16.0"
+    val truth_version = "1.1.4"
 
 
     // ViewModel
@@ -93,7 +94,12 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
     testImplementation("junit:junit:4.13.2")
+
+    androidTestImplementation("androidx.arch.core:core-testing:$arch_version")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version")
+    androidTestImplementation("com.google.truth:truth:$truth_version")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
