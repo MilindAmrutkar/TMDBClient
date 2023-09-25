@@ -13,9 +13,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.backtocoding.tmdbclient.R
 import com.backtocoding.tmdbclient.databinding.ActivityArtistBinding
-import com.backtocoding.tmdbclient.presentation.di.Injector
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class ArtistActivity : AppCompatActivity() {
     @Inject
     lateinit var factory: ArtistViewModelFactory
@@ -26,8 +27,7 @@ class ArtistActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_artist)
-        (application as Injector).createArtistSubComponent()
-            .inject(this)
+
         artistViewModel = ViewModelProvider(this, factory)[ArtistViewModel::class.java]
         initRecyclerView()
     }

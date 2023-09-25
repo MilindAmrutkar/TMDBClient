@@ -5,11 +5,15 @@ import com.backtocoding.tmdbclient.domain.usecase.UpdateTvShowsUseCase
 import com.backtocoding.tmdbclient.presentation.tv.TvShowViewModelFactory
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.scopes.ActivityScoped
 
 @Module
+@InstallIn(ActivityComponent::class)
 class TvShowModule {
 
-    @TvShowScope
+    @ActivityScoped
     @Provides
     fun provideTvShowViewModelFactory(
         getTvShowsUseCase: GetTvShowsUseCase,

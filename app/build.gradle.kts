@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -51,7 +52,7 @@ dependencies {
     val arch_version = "2.2.0"
     val room_version = "2.5.2"
     val coroutines_version = "1.7.3"
-    val dagger_version = "2.48"
+    val dagger_version = "2.47"
     val retrofit_version = "2.9.0"
     val interceptor_version = "4.11.0"
     val glide_version = "4.16.0"
@@ -78,9 +79,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
 
-    // Dagger
-    implementation("com.google.dagger:dagger:$dagger_version")
-    kapt("com.google.dagger:dagger-compiler:$dagger_version")
+    // Dagger Hilt
+    implementation("com.google.dagger:hilt-android:$dagger_version")
+    kapt("com.google.dagger:hilt-android-compiler:$dagger_version")
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
